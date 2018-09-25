@@ -1,0 +1,1210 @@
+[2017-08-09 02:45:28 +0000] [12821] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f4c19744398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f4c197440c8>
+  pre_fork: <function pre_fork at 0x7f4c19744230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f4c199beed8>
+  pre_exec: <function pre_exec at 0x7f4c19744938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f4c19744500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f4c19747050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f4c19744aa0>
+  post_request: <function post_request at 0x7f4c19744b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f4c19744668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f4c19744cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f4c199bed70>
+  worker_abort: <function worker_abort at 0x7f4c197447d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f4c19744e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-09 02:45:28 +0000] [12821] [INFO] Starting gunicorn 19.6.0
+[2017-08-09 02:45:28 +0000] [12821] [DEBUG] Arbiter booted
+[2017-08-09 02:45:28 +0000] [12821] [INFO] Listening at: unix:/var/run/gunicorn.sock (12821)
+[2017-08-09 02:45:28 +0000] [12821] [INFO] Using worker: sync
+[2017-08-09 02:45:28 +0000] [12827] [INFO] Booting worker with pid: 12827
+[2017-08-09 02:45:28 +0000] [12829] [INFO] Booting worker with pid: 12829
+[2017-08-09 02:45:28 +0000] [12831] [INFO] Booting worker with pid: 12831
+[2017-08-09 02:45:28 +0000] [12821] [DEBUG] 3 workers
+[2017-08-09 06:46:32 +0000] [12827] [DEBUG] GET /prov
+ - - [09/Aug/2017:06:46:32 +0000] "GET /prov HTTP/1.0" 500 108492 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 06:47:10 +0000] [12831] [DEBUG] GET /prov
+ - - [09/Aug/2017:06:47:10 +0000] "GET /prov HTTP/1.0" 500 108791 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 06:48:27 +0000] [12831] [DEBUG] GET /prov
+ - - [09/Aug/2017:06:48:27 +0000] "GET /prov HTTP/1.0" 301 - "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 06:48:27 +0000] [12831] [DEBUG] GET /prov/
+ - - [09/Aug/2017:06:48:27 +0000] "GET /prov/ HTTP/1.0" 500 77147 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 09:21:34 +0000] [12827] [DEBUG] GET /prov/
+ - - [09/Aug/2017:09:21:34 +0000] "GET /prov/ HTTP/1.0" 200 7172 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 11:33:59 +0000] [12829] [DEBUG] GET /prov/
+ - - [09/Aug/2017:11:33:59 +0000] "GET /prov/ HTTP/1.0" 200 7172 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 11:34:17 +0000] [12829] [DEBUG] POST /prov/
+ - - [09/Aug/2017:11:34:18 +0000] "POST /prov/ HTTP/1.0" 200 5308 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 11:34:56 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:11:34:57 +0000] "POST /prov/ HTTP/1.0" 500 145672 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 11:43:29 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:11:43:29 +0000] "POST /prov/ HTTP/1.0" 500 145807 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 11:44:23 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:11:44:24 +0000] "POST /prov/ HTTP/1.0" 500 145739 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:08:57 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:08:57 +0000] "POST /prov/ HTTP/1.0" 500 145739 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:11:19 +0000] [12829] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:11:19 +0000] "POST /prov/ HTTP/1.0" 500 145842 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:35:22 +0000] [12829] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:35:23 +0000] "POST /prov/ HTTP/1.0" 500 145894 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:38:26 +0000] [12829] [DEBUG] GET /logout/
+ - - [09/Aug/2017:12:38:27 +0000] "GET /logout/ HTTP/1.0" 200 1807 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:38:32 +0000] [12829] [DEBUG] GET /prov/
+ - - [09/Aug/2017:12:38:33 +0000] "GET /prov/ HTTP/1.0" 200 7172 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:38:48 +0000] [12829] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:38:50 +0000] "POST /prov/ HTTP/1.0" 200 5308 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:39:28 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:39:28 +0000] "POST /prov/ HTTP/1.0" 500 143000 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:41:41 +0000] [12831] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:41:41 +0000] "POST /prov/ HTTP/1.0" 500 143135 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:45:01 +0000] [12831] [DEBUG] GET /logout/
+ - - [09/Aug/2017:12:45:01 +0000] "GET /logout/ HTTP/1.0" 200 1807 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:45:07 +0000] [12831] [DEBUG] GET /prov/
+ - - [09/Aug/2017:12:45:07 +0000] "GET /prov/ HTTP/1.0" 200 7172 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:45:28 +0000] [12831] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:45:32 +0000] "POST /prov/ HTTP/1.0" 200 5308 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 12:45:47 +0000] [12831] [DEBUG] POST /prov/
+ - - [09/Aug/2017:12:45:48 +0000] "POST /prov/ HTTP/1.0" 500 143000 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:03:24 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:03:24 +0000] "POST /prov/ HTTP/1.0" 500 143135 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:04:13 +0000] [12827] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:04:13 +0000] "POST /prov/ HTTP/1.0" 500 143135 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:04:34 +0000] [12829] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:04:34 +0000] "POST /prov/ HTTP/1.0" 500 143135 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:07:40 +0000] [12829] [DEBUG] GET /logout/
+ - - [09/Aug/2017:13:07:40 +0000] "GET /logout/ HTTP/1.0" 200 1807 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:07:43 +0000] [12829] [DEBUG] GET /prov/
+ - - [09/Aug/2017:13:07:43 +0000] "GET /prov/ HTTP/1.0" 200 7172 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 09:08:24 +0000] [20553] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f7c8c847398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f7c8c8470c8>
+  pre_fork: <function pre_fork at 0x7f7c8c847230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f7c8c83eed8>
+  pre_exec: <function pre_exec at 0x7f7c8c847938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f7c8c847500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f7c8c5c7050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f7c8c847aa0>
+  post_request: <function post_request at 0x7f7c8c847b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f7c8c847668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f7c8c847cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f7c8c83ed70>
+  worker_abort: <function worker_abort at 0x7f7c8c8477d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f7c8c847e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-09 09:08:24 +0000] [20553] [INFO] Starting gunicorn 19.6.0
+[2017-08-09 09:08:24 +0000] [20553] [DEBUG] Arbiter booted
+[2017-08-09 09:08:24 +0000] [20553] [INFO] Listening at: unix:/var/run/gunicorn.sock (20553)
+[2017-08-09 09:08:24 +0000] [20553] [INFO] Using worker: sync
+[2017-08-09 09:08:24 +0000] [20559] [INFO] Booting worker with pid: 20559
+[2017-08-09 09:08:24 +0000] [20561] [INFO] Booting worker with pid: 20561
+[2017-08-09 09:08:25 +0000] [20562] [INFO] Booting worker with pid: 20562
+[2017-08-09 09:08:25 +0000] [20553] [DEBUG] 3 workers
+[2017-08-09 13:08:43 +0000] [20561] [DEBUG] GET /prov/
+ - - [09/Aug/2017:13:08:43 +0000] "GET /prov/ HTTP/1.0" 200 7172 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:08:55 +0000] [20562] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:08:57 +0000] "POST /prov/ HTTP/1.0" 200 5308 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:09:10 +0000] [20562] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:09:10 +0000] "POST /prov/ HTTP/1.0" 500 135702 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 09:19:36 +0000] [20799] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fe1c26a7398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fe1c26a70c8>
+  pre_fork: <function pre_fork at 0x7fe1c26a7230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fe1c269eed8>
+  pre_exec: <function pre_exec at 0x7fe1c26a7938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fe1c26a7500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fe1c2427050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fe1c26a7aa0>
+  post_request: <function post_request at 0x7fe1c26a7b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fe1c26a7668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fe1c26a7cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fe1c269ed70>
+  worker_abort: <function worker_abort at 0x7fe1c26a77d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fe1c26a7e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-09 09:19:36 +0000] [20799] [INFO] Starting gunicorn 19.6.0
+[2017-08-09 09:19:36 +0000] [20799] [DEBUG] Arbiter booted
+[2017-08-09 09:19:36 +0000] [20799] [INFO] Listening at: unix:/var/run/gunicorn.sock (20799)
+[2017-08-09 09:19:36 +0000] [20799] [INFO] Using worker: sync
+[2017-08-09 09:19:36 +0000] [20805] [INFO] Booting worker with pid: 20805
+[2017-08-09 09:19:36 +0000] [20806] [INFO] Booting worker with pid: 20806
+[2017-08-09 09:19:36 +0000] [20809] [INFO] Booting worker with pid: 20809
+[2017-08-09 09:19:37 +0000] [20799] [DEBUG] 3 workers
+[2017-08-09 13:19:45 +0000] [20809] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:19:45 +0000] "POST /prov/ HTTP/1.0" 500 140228 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 09:30:35 +0000] [21045] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fef5e97f398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fef5e97f0c8>
+  pre_fork: <function pre_fork at 0x7fef5e97f230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fef5e976ed8>
+  pre_exec: <function pre_exec at 0x7fef5e97f938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fef5e97f500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fef5e6ff050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fef5e97faa0>
+  post_request: <function post_request at 0x7fef5e97fb90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fef5e97f668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fef5e97fcf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fef5e976d70>
+  worker_abort: <function worker_abort at 0x7fef5e97f7d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fef5e97fe60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-09 09:30:35 +0000] [21045] [INFO] Starting gunicorn 19.6.0
+[2017-08-09 09:30:35 +0000] [21045] [DEBUG] Arbiter booted
+[2017-08-09 09:30:35 +0000] [21045] [INFO] Listening at: unix:/var/run/gunicorn.sock (21045)
+[2017-08-09 09:30:35 +0000] [21045] [INFO] Using worker: sync
+[2017-08-09 09:30:35 +0000] [21051] [INFO] Booting worker with pid: 21051
+[2017-08-09 09:30:35 +0000] [21052] [INFO] Booting worker with pid: 21052
+[2017-08-09 09:30:35 +0000] [21054] [INFO] Booting worker with pid: 21054
+[2017-08-09 09:30:35 +0000] [21045] [DEBUG] 3 workers
+[2017-08-09 13:30:47 +0000] [21054] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:30:47 +0000] "POST /prov/ HTTP/1.0" 500 75784 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:31:38 +0000] [21052] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:31:38 +0000] "POST /prov/ HTTP/1.0" 500 81364 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 09:36:28 +0000] [21196] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fe430e8d398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fe430e8d0c8>
+  pre_fork: <function pre_fork at 0x7fe430e8d230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fe430e84ed8>
+  pre_exec: <function pre_exec at 0x7fe430e8d938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fe430e8d500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fe430c0d050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fe430e8daa0>
+  post_request: <function post_request at 0x7fe430e8db90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fe430e8d668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fe430e8dcf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fe430e84d70>
+  worker_abort: <function worker_abort at 0x7fe430e8d7d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fe430e8de60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-09 09:36:28 +0000] [21196] [INFO] Starting gunicorn 19.6.0
+[2017-08-09 09:36:28 +0000] [21196] [DEBUG] Arbiter booted
+[2017-08-09 09:36:28 +0000] [21196] [INFO] Listening at: unix:/var/run/gunicorn.sock (21196)
+[2017-08-09 09:36:28 +0000] [21196] [INFO] Using worker: sync
+[2017-08-09 09:36:28 +0000] [21202] [INFO] Booting worker with pid: 21202
+[2017-08-09 09:36:28 +0000] [21204] [INFO] Booting worker with pid: 21204
+[2017-08-09 09:36:28 +0000] [21205] [INFO] Booting worker with pid: 21205
+[2017-08-09 09:36:28 +0000] [21196] [DEBUG] 3 workers
+[2017-08-09 13:36:36 +0000] [21205] [DEBUG] POST /prov/
+ - - [09/Aug/2017:13:36:37 +0000] "POST /prov/ HTTP/1.0" 200 10985 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:36:53 +0000] [21205] [DEBUG] GET /logout/
+ - - [09/Aug/2017:13:36:53 +0000] "GET /logout/ HTTP/1.0" 200 1807 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-09 13:36:57 +0000] [21204] [DEBUG] GET /prov/
+ - - [09/Aug/2017:13:36:58 +0000] "GET /prov/ HTTP/1.0" 200 7172 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 06:25:00 +0000] [21202] [DEBUG] GET /prov/
+ - - [10/Aug/2017:06:25:00 +0000] "GET /prov/ HTTP/1.0" 200 7172 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 06:25:01 +0000] [21204] [DEBUG] GET /favicon.ico
+ - - [10/Aug/2017:06:25:01 +0000] "GET /favicon.ico HTTP/1.0" 404 2437 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 07:00:09 +0000] [21204] [DEBUG] POST /prov/
+ - - [10/Aug/2017:07:00:11 +0000] "POST /prov/ HTTP/1.0" 200 5308 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 07:00:20 +0000] [21204] [DEBUG] POST /prov/
+ - - [10/Aug/2017:07:00:20 +0000] "POST /prov/ HTTP/1.0" 200 11625 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 07:00:47 +0000] [21202] [DEBUG] GET /logout/
+ - - [10/Aug/2017:07:00:47 +0000] "GET /logout/ HTTP/1.0" 200 1807 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 07:00:51 +0000] [21204] [DEBUG] GET /prov/
+ - - [10/Aug/2017:07:00:51 +0000] "GET /prov/ HTTP/1.0" 200 7172 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 06:44:14 +0000] [13480] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f74a869b398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f74a869b0c8>
+  pre_fork: <function pre_fork at 0x7f74a869b230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f74a8692ed8>
+  pre_exec: <function pre_exec at 0x7f74a869b938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f74a869b500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f74a841b050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f74a869baa0>
+  post_request: <function post_request at 0x7f74a869bb90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f74a869b668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f74a869bcf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f74a8692d70>
+  worker_abort: <function worker_abort at 0x7f74a869b7d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f74a869be60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-10 06:44:14 +0000] [13480] [INFO] Starting gunicorn 19.6.0
+[2017-08-10 06:44:14 +0000] [13480] [DEBUG] Arbiter booted
+[2017-08-10 06:44:14 +0000] [13480] [INFO] Listening at: unix:/var/run/gunicorn.sock (13480)
+[2017-08-10 06:44:14 +0000] [13480] [INFO] Using worker: sync
+[2017-08-10 06:44:14 +0000] [13486] [INFO] Booting worker with pid: 13486
+[2017-08-10 06:44:14 +0000] [13488] [INFO] Booting worker with pid: 13488
+[2017-08-10 06:44:14 +0000] [13490] [INFO] Booting worker with pid: 13490
+[2017-08-10 06:44:14 +0000] [13480] [DEBUG] 3 workers
+[2017-08-10 10:44:35 +0000] [13490] [DEBUG] GET /prov/
+ - - [10/Aug/2017:10:44:36 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 10:44:36 +0000] [13488] [DEBUG] GET /favicon.ico
+ - - [10/Aug/2017:10:44:37 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 10:44:39 +0000] [13490] [DEBUG] GET /help/
+ - - [10/Aug/2017:10:44:39 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 10:45:10 +0000] [13486] [DEBUG] GET /prov/
+ - - [10/Aug/2017:10:45:10 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 10:54:37 +0000] [13486] [DEBUG] GET /help/
+ - - [10/Aug/2017:10:54:37 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 10:55:00 +0000] [13486] [DEBUG] GET /prov/
+ - - [10/Aug/2017:10:55:00 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-10 20:18:52 +0000] [21196] [CRITICAL] WORKER TIMEOUT (pid:21204)
+[2017-08-10 20:19:07 +0000] [21196] [CRITICAL] WORKER TIMEOUT (pid:21205)
+[2017-08-10 20:18:54 +0000] [21045] [CRITICAL] WORKER TIMEOUT (pid:21051)
+[2017-08-10 20:19:07 +0000] [21045] [CRITICAL] WORKER TIMEOUT (pid:21052)
+[2017-08-10 20:19:07 +0000] [21045] [CRITICAL] WORKER TIMEOUT (pid:21054)
+[2017-08-10 20:18:56 +0000] [20553] [CRITICAL] WORKER TIMEOUT (pid:20562)
+[2017-08-11 00:19:07 +0000] [20562] [INFO] Worker exiting (pid: 20562)
+[2017-08-10 20:18:56 +0000] [20799] [CRITICAL] WORKER TIMEOUT (pid:20805)
+[2017-08-10 20:19:07 +0000] [20799] [CRITICAL] WORKER TIMEOUT (pid:20806)
+[2017-08-10 20:18:58 +0000] [13480] [CRITICAL] WORKER TIMEOUT (pid:13490)
+[2017-08-10 20:19:07 +0000] [13480] [CRITICAL] WORKER TIMEOUT (pid:13486)
+[2017-08-10 20:19:01 +0000] [12821] [CRITICAL] WORKER TIMEOUT (pid:12829)
+[2017-08-11 00:19:07 +0000] [12829] [INFO] Worker exiting (pid: 12829)
+[2017-08-11 00:19:07 +0000] [21205] [INFO] Worker exiting (pid: 21205)
+[2017-08-11 00:19:07 +0000] [21051] [INFO] Worker exiting (pid: 21051)
+[2017-08-11 00:19:07 +0000] [21054] [INFO] Worker exiting (pid: 21054)
+[2017-08-11 00:19:07 +0000] [20805] [INFO] Worker exiting (pid: 20805)
+[2017-08-11 00:19:07 +0000] [13490] [INFO] Worker exiting (pid: 13490)
+[2017-08-11 00:19:07 +0000] [13486] [INFO] Worker exiting (pid: 13486)
+[2017-08-11 00:19:07 +0000] [21204] [INFO] Worker exiting (pid: 21204)
+[2017-08-11 00:19:07 +0000] [21052] [INFO] Worker exiting (pid: 21052)
+[2017-08-11 00:19:07 +0000] [20806] [INFO] Worker exiting (pid: 20806)
+[2017-08-10 20:19:07 +0000] [29325] [INFO] Booting worker with pid: 29325
+[2017-08-10 20:19:07 +0000] [29326] [INFO] Booting worker with pid: 29326
+[2017-08-10 20:19:08 +0000] [29336] [INFO] Booting worker with pid: 29336
+[2017-08-10 20:19:08 +0000] [29339] [INFO] Booting worker with pid: 29339
+[2017-08-10 20:19:08 +0000] [21045] [DEBUG] 2 workers
+[2017-08-10 20:19:08 +0000] [13480] [DEBUG] 2 workers
+[2017-08-10 20:19:08 +0000] [29347] [INFO] Booting worker with pid: 29347
+[2017-08-10 20:19:08 +0000] [29349] [INFO] Booting worker with pid: 29349
+[2017-08-10 20:19:08 +0000] [29348] [INFO] Booting worker with pid: 29348
+[2017-08-10 20:19:08 +0000] [20799] [DEBUG] 2 workers
+[2017-08-10 20:19:08 +0000] [29350] [INFO] Booting worker with pid: 29350
+[2017-08-10 20:19:08 +0000] [29355] [INFO] Booting worker with pid: 29355
+[2017-08-10 20:19:08 +0000] [13480] [DEBUG] 3 workers
+[2017-08-10 20:19:08 +0000] [29362] [INFO] Booting worker with pid: 29362
+[2017-08-10 20:19:08 +0000] [29363] [INFO] Booting worker with pid: 29363
+[2017-08-10 20:19:08 +0000] [21045] [DEBUG] 3 workers
+[2017-08-10 20:19:08 +0000] [20799] [DEBUG] 3 workers
+[2017-08-11 07:13:53 +0000] [13488] [DEBUG] GET /prov/
+ - - [11/Aug/2017:07:13:53 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 07:13:54 +0000] [29350] [DEBUG] GET /favicon.ico
+ - - [11/Aug/2017:07:13:54 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 12:42:03 +0000] [29362] [DEBUG] GET /prov/
+ - - [11/Aug/2017:12:42:03 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 12:42:04 +0000] [29362] [DEBUG] GET /favicon.ico
+ - - [11/Aug/2017:12:42:04 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 15:55:46 +0000] [29350] [DEBUG] GET /prov/
+ - - [11/Aug/2017:15:55:46 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 15:55:48 +0000] [29350] [DEBUG] GET /favicon.ico
+ - - [11/Aug/2017:15:55:48 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 15:55:57 +0000] [29350] [DEBUG] GET /help/
+ - - [11/Aug/2017:15:55:57 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 15:56:14 +0000] [29350] [DEBUG] GET /prov/
+ - - [11/Aug/2017:15:56:14 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 19:59:47 +0000] [29362] [DEBUG] GET /prov/
+ - - [11/Aug/2017:19:59:47 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 19:59:47 +0000] [13488] [DEBUG] GET /favicon.ico
+ - - [11/Aug/2017:19:59:47 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-11 20:00:01 +0000] [29350] [DEBUG] GET /prov/
+ - - [11/Aug/2017:20:00:01 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:00:03 +0000] [13488] [DEBUG] GET /favicon.ico
+ - - [11/Aug/2017:20:00:03 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:01:33 +0000] [13488] [DEBUG] POST /prov/
+ - - [11/Aug/2017:20:01:36 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:01:53 +0000] [13488] [DEBUG] GET /help/
+ - - [11/Aug/2017:20:01:53 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:02:07 +0000] [29350] [DEBUG] GET /prov/
+ - - [11/Aug/2017:20:02:07 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:02:48 +0000] [29350] [DEBUG] POST /prov/
+ - - [11/Aug/2017:20:02:48 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:03:44 +0000] [29350] [DEBUG] POST /prov/
+ - - [11/Aug/2017:20:03:44 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:04:10 +0000] [29350] [DEBUG] GET /help/
+ - - [11/Aug/2017:20:04:10 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:11:47 +0000] [29350] [DEBUG] GET /prov/
+ - - [11/Aug/2017:20:11:47 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:21:08 +0000] [13488] [DEBUG] GET /help/
+ - - [11/Aug/2017:20:21:08 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://oc-140-86-38-226.compute.oraclecloud.com:8000/prov/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-11 20:21:11 +0000] [29350] [DEBUG] GET /prov/
+ - - [11/Aug/2017:20:21:11 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+[2017-08-14 13:40:57 +0000] [29350] [DEBUG] GET /prov/
+ - - [14/Aug/2017:13:40:57 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-14 13:40:58 +0000] [13488] [DEBUG] GET /favicon.ico
+ - - [14/Aug/2017:13:40:58 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-15 17:39:35 +0000] [13488] [DEBUG] GET /prov/
+ - - [15/Aug/2017:17:39:35 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-15 17:39:37 +0000] [29362] [DEBUG] GET /favicon.ico
+ - - [15/Aug/2017:17:39:37 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-15 17:39:49 +0000] [29350] [DEBUG] GET /help/
+ - - [15/Aug/2017:17:39:49 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:46:02 +0000] [13488] [DEBUG] GET /prov/
+ - - [16/Aug/2017:14:46:02 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:46:03 +0000] [29350] [DEBUG] GET /favicon.ico
+ - - [16/Aug/2017:14:46:03 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:46:15 +0000] [29350] [DEBUG] POST /prov/
+ - - [16/Aug/2017:14:46:17 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:46:30 +0000] [13488] [DEBUG] POST /prov/
+ - - [16/Aug/2017:14:46:30 +0000] "POST /prov/ HTTP/1.0" 500 85290 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 10:50:46 +0000] [24322] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fe78357d398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fe78357d0c8>
+  pre_fork: <function pre_fork at 0x7fe78357d230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fe783574ed8>
+  pre_exec: <function pre_exec at 0x7fe78357d938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fe78357d500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fe7832fd050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fe78357daa0>
+  post_request: <function post_request at 0x7fe78357db90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fe78357d668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fe78357dcf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fe783574d70>
+  worker_abort: <function worker_abort at 0x7fe78357d7d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fe78357de60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-16 10:50:46 +0000] [24322] [INFO] Starting gunicorn 19.6.0
+[2017-08-16 10:50:46 +0000] [24322] [DEBUG] Arbiter booted
+[2017-08-16 10:50:46 +0000] [24322] [INFO] Listening at: unix:/var/run/gunicorn.sock (24322)
+[2017-08-16 10:50:46 +0000] [24322] [INFO] Using worker: sync
+[2017-08-16 10:50:46 +0000] [24328] [INFO] Booting worker with pid: 24328
+[2017-08-16 10:50:46 +0000] [24330] [INFO] Booting worker with pid: 24330
+[2017-08-16 10:50:46 +0000] [24332] [INFO] Booting worker with pid: 24332
+[2017-08-16 10:50:47 +0000] [24322] [DEBUG] 3 workers
+[2017-08-16 14:51:47 +0000] [24330] [DEBUG] GET /logout
+ - - [16/Aug/2017:14:51:47 +0000] "GET /logout HTTP/1.0" 301 - "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:51:47 +0000] [24328] [DEBUG] GET /logout/
+ - - [16/Aug/2017:14:51:48 +0000] "GET /logout/ HTTP/1.0" 200 1816 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:51:52 +0000] [24332] [DEBUG] GET /prov/
+ - - [16/Aug/2017:14:51:52 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:52:00 +0000] [24328] [DEBUG] POST /prov/
+ - - [16/Aug/2017:14:52:05 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:52:15 +0000] [24330] [DEBUG] POST /prov/
+ - - [16/Aug/2017:14:52:15 +0000] "POST /prov/ HTTP/1.0" 500 105311 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 14:58:16 +0000] [24328] [DEBUG] GET /logout/
+ - - [16/Aug/2017:14:58:16 +0000] "GET /logout/ HTTP/1.0" 200 1816 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:00:58 +0000] [24332] [DEBUG] GET /prov/
+ - - [16/Aug/2017:15:00:58 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:01:07 +0000] [24330] [DEBUG] POST /prov/
+ - - [16/Aug/2017:15:01:13 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:01:25 +0000] [24328] [DEBUG] POST /prov/
+ - - [16/Aug/2017:15:01:25 +0000] "POST /prov/ HTTP/1.0" 200 11110 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:02:03 +0000] [24332] [DEBUG] GET /logout/
+ - - [16/Aug/2017:15:02:03 +0000] "GET /logout/ HTTP/1.0" 200 1816 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:02:06 +0000] [24330] [DEBUG] GET /prov/
+ - - [16/Aug/2017:15:02:06 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:03:42 +0000] [24328] [DEBUG] GET /help/
+ - - [16/Aug/2017:15:03:42 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:03:56 +0000] [24332] [DEBUG] GET /prov/
+ - - [16/Aug/2017:15:03:57 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:24:36 +0000] [24332] [DEBUG] GET /prov/
+ - - [16/Aug/2017:15:24:36 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:25:27 +0000] [24332] [DEBUG] GET /prov/
+ - - [16/Aug/2017:15:25:27 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:25:40 +0000] [24330] [DEBUG] POST /prov/
+ - - [16/Aug/2017:15:25:43 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:25:51 +0000] [24330] [DEBUG] POST /prov/
+ - - [16/Aug/2017:15:25:52 +0000] "POST /prov/ HTTP/1.0" 200 11110 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:33:36 +0000] [24330] [DEBUG] GET /logout/
+ - - [16/Aug/2017:15:33:36 +0000] "GET /logout/ HTTP/1.0" 200 1816 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 15:43:19 +0000] [24332] [DEBUG] GET /prov/
+ - - [16/Aug/2017:15:43:19 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 16:47:40 +0000] [24328] [DEBUG] POST /prov/
+ - - [16/Aug/2017:16:47:44 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 16:47:53 +0000] [24328] [DEBUG] GET /help/
+ - - [16/Aug/2017:16:47:53 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 16:48:00 +0000] [24328] [DEBUG] GET /prov/
+ - - [16/Aug/2017:16:48:00 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-16 16:48:41 +0000] [24330] [DEBUG] POST /prov/
+ - - [16/Aug/2017:16:48:41 +0000] "POST /prov/ HTTP/1.0" 200 11110 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:04:30 +0000] [24330] [DEBUG] GET /prov/
+ - - [17/Aug/2017:09:04:30 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:04:32 +0000] [24328] [DEBUG] GET /favicon.ico
+ - - [17/Aug/2017:09:04:32 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:04:44 +0000] [24328] [DEBUG] GET /help/
+ - - [17/Aug/2017:09:04:44 +0000] "GET /help/ HTTP/1.0" 200 1874 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:04:51 +0000] [24330] [DEBUG] GET /prov/
+ - - [17/Aug/2017:09:04:51 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/help/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:45:19 +0000] [24332] [DEBUG] POST /prov/
+ - - [17/Aug/2017:09:45:19 +0000] "POST /prov/ HTTP/1.0" 200 11110 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:51:45 +0000] [18873] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f30021e0398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f30021e00c8>
+  pre_fork: <function pre_fork at 0x7f30021e0230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f30021d7ed8>
+  pre_exec: <function pre_exec at 0x7f30021e0938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f30021e0500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f3001f60050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f30021e0aa0>
+  post_request: <function post_request at 0x7f30021e0b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f30021e0668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f30021e0cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f30021d7d70>
+  worker_abort: <function worker_abort at 0x7f30021e07d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f30021e0e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-17 09:51:45 +0000] [18873] [INFO] Starting gunicorn 19.6.0
+[2017-08-17 09:51:45 +0000] [18873] [DEBUG] Arbiter booted
+[2017-08-17 09:51:45 +0000] [18873] [INFO] Listening at: unix:/var/run/gunicorn.sock (18873)
+[2017-08-17 09:51:45 +0000] [18873] [INFO] Using worker: sync
+[2017-08-17 09:51:45 +0000] [18879] [INFO] Booting worker with pid: 18879
+[2017-08-17 09:51:45 +0000] [18881] [INFO] Booting worker with pid: 18881
+[2017-08-17 09:51:45 +0000] [18883] [INFO] Booting worker with pid: 18883
+[2017-08-17 09:51:45 +0000] [18873] [DEBUG] 3 workers
+[2017-08-17 13:54:07 +0000] [18879] [DEBUG] GET /logout/
+ - - [17/Aug/2017:13:54:07 +0000] "GET /logout/ HTTP/1.0" 200 1816 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:54:10 +0000] [18883] [DEBUG] GET /prov/
+ - - [17/Aug/2017:13:54:10 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:54:20 +0000] [18881] [DEBUG] POST /prov/
+ - - [17/Aug/2017:13:54:25 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:54:32 +0000] [18883] [DEBUG] POST /prov/
+ - - [17/Aug/2017:13:54:33 +0000] "POST /prov/ HTTP/1.0" 500 74438 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:55:59 +0000] [18881] [DEBUG] POST /prov/
+ - - [17/Aug/2017:13:55:59 +0000] "POST /prov/ HTTP/1.0" 500 74745 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 09:56:31 +0000] [19005] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f1076b20398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f1076b200c8>
+  pre_fork: <function pre_fork at 0x7f1076b20230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f1076b17ed8>
+  pre_exec: <function pre_exec at 0x7f1076b20938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f1076b20500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f10768a0050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f1076b20aa0>
+  post_request: <function post_request at 0x7f1076b20b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f1076b20668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f1076b20cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f1076b17d70>
+  worker_abort: <function worker_abort at 0x7f1076b207d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f1076b20e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-17 09:56:31 +0000] [19005] [INFO] Starting gunicorn 19.6.0
+[2017-08-17 09:56:31 +0000] [19005] [DEBUG] Arbiter booted
+[2017-08-17 09:56:31 +0000] [19005] [INFO] Listening at: unix:/var/run/gunicorn.sock (19005)
+[2017-08-17 09:56:31 +0000] [19005] [INFO] Using worker: sync
+[2017-08-17 09:56:31 +0000] [19011] [INFO] Booting worker with pid: 19011
+[2017-08-17 09:56:31 +0000] [19012] [INFO] Booting worker with pid: 19012
+[2017-08-17 09:56:31 +0000] [19015] [INFO] Booting worker with pid: 19015
+[2017-08-17 09:56:31 +0000] [19005] [DEBUG] 3 workers
+[2017-08-17 13:56:43 +0000] [19015] [DEBUG] POST /prov/
+ - - [17/Aug/2017:13:56:44 +0000] "POST /prov/ HTTP/1.0" 500 101009 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:57:01 +0000] [19015] [DEBUG] GET /logout/
+ - - [17/Aug/2017:13:57:01 +0000] "GET /logout/ HTTP/1.0" 200 1816 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:57:05 +0000] [19012] [DEBUG] GET /prov/
+ - - [17/Aug/2017:13:57:05 +0000] "GET /prov/ HTTP/1.0" 200 7297 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:57:15 +0000] [19015] [DEBUG] POST /prov/
+ - - [17/Aug/2017:13:57:19 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 13:57:26 +0000] [19011] [DEBUG] POST /prov/
+ - - [17/Aug/2017:13:57:27 +0000] "POST /prov/ HTTP/1.0" 500 97052 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 14:00:37 +0000] [19015] [DEBUG] GET /prov/
+ - - [17/Aug/2017:14:00:37 +0000] "GET /prov/ HTTP/1.0" 200 7297 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 14:00:50 +0000] [19012] [DEBUG] POST /prov/
+ - - [17/Aug/2017:14:00:56 +0000] "POST /prov/ HTTP/1.0" 200 5433 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 14:01:03 +0000] [19015] [DEBUG] POST /prov/
+ - - [17/Aug/2017:14:01:03 +0000] "POST /prov/ HTTP/1.0" 500 97101 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 14:02:15 +0000] [19012] [DEBUG] POST /prov/
+ - - [17/Aug/2017:14:02:16 +0000] "POST /prov/ HTTP/1.0" 500 97286 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 14:03:10 +0000] [19015] [DEBUG] POST /prov/
+ - - [17/Aug/2017:14:03:10 +0000] "POST /prov/ HTTP/1.0" 500 97390 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-17 10:03:28 +0000] [19156] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fda16dd3398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fda16dd30c8>
+  pre_fork: <function pre_fork at 0x7fda16dd3230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fda16dcaed8>
+  pre_exec: <function pre_exec at 0x7fda16dd3938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fda16dd3500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fda16b53050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fda16dd3aa0>
+  post_request: <function post_request at 0x7fda16dd3b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fda16dd3668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fda16dd3cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fda16dcad70>
+  worker_abort: <function worker_abort at 0x7fda16dd37d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fda16dd3e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-17 10:03:28 +0000] [19156] [INFO] Starting gunicorn 19.6.0
+[2017-08-17 10:03:28 +0000] [19156] [DEBUG] Arbiter booted
+[2017-08-17 10:03:28 +0000] [19156] [INFO] Listening at: unix:/var/run/gunicorn.sock (19156)
+[2017-08-17 10:03:28 +0000] [19156] [INFO] Using worker: sync
+[2017-08-17 10:03:28 +0000] [19162] [INFO] Booting worker with pid: 19162
+[2017-08-17 10:03:28 +0000] [19163] [INFO] Booting worker with pid: 19163
+[2017-08-17 10:03:28 +0000] [19166] [INFO] Booting worker with pid: 19166
+[2017-08-17 10:03:28 +0000] [19156] [DEBUG] 3 workers
+[2017-08-17 14:03:38 +0000] [19166] [DEBUG] POST /prov/
+ - - [17/Aug/2017:14:03:38 +0000] "POST /prov/ HTTP/1.0" 200 11110 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 05:19:43 +0000] [19612] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7ff561f24398>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7ff561f240c8>
+  pre_fork: <function pre_fork at 0x7ff561f24230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: /home/opc/provui/gunicorn.log
+  group: 48
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: provui
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7ff561f1bed8>
+  pre_exec: <function pre_exec at 0x7ff561f24938>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7ff561f24500>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7ff561ca4050>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7ff561f24aa0>
+  post_request: <function post_request at 0x7ff561f24b90>
+  user: 48
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7ff561f24668>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7ff561f24cf8>
+  chdir: /home/opc/provui
+  paste: None
+  default_proc_name: provui.wsgi:application
+  errorlog: /home/opc/provui/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7ff561f1bd70>
+  worker_abort: <function worker_abort at 0x7ff561f247d0>
+  bind: ['unix:/var/run/gunicorn.sock']
+  raw_env: []
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7ff561f24e60>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-08-23 05:19:43 +0000] [19612] [INFO] Starting gunicorn 19.6.0
+[2017-08-23 05:19:43 +0000] [19612] [DEBUG] Arbiter booted
+[2017-08-23 05:19:43 +0000] [19612] [INFO] Listening at: unix:/var/run/gunicorn.sock (19612)
+[2017-08-23 05:19:43 +0000] [19612] [INFO] Using worker: sync
+[2017-08-23 05:19:43 +0000] [19618] [INFO] Booting worker with pid: 19618
+[2017-08-23 05:19:43 +0000] [19620] [INFO] Booting worker with pid: 19620
+[2017-08-23 05:19:43 +0000] [19622] [INFO] Booting worker with pid: 19622
+[2017-08-23 05:19:43 +0000] [19612] [DEBUG] 3 workers
+[2017-08-23 09:20:16 +0000] [19622] [DEBUG] GET /prov/
+ - - [23/Aug/2017:09:20:17 +0000] "GET /prov/ HTTP/1.0" 200 11370 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 09:20:18 +0000] [19620] [DEBUG] GET /favicon.ico
+ - - [23/Aug/2017:09:20:18 +0000] "GET /favicon.ico HTTP/1.0" 404 2556 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 09:20:53 +0000] [19620] [DEBUG] POST /prov/
+ - - [23/Aug/2017:09:20:53 +0000] "POST /prov/ HTTP/1.0" 200 14517 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 09:21:47 +0000] [19622] [DEBUG] GET /logout/
+ - - [23/Aug/2017:09:21:47 +0000] "GET /logout/ HTTP/1.0" 200 1816 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 09:21:49 +0000] [19618] [DEBUG] GET /prov/
+ - - [23/Aug/2017:09:21:49 +0000] "GET /prov/ HTTP/1.0" 200 11370 "http://140.86.38.226:8000/logout/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 09:22:18 +0000] [19618] [DEBUG] POST /prov/
+ - - [23/Aug/2017:09:22:23 +0000] "POST /prov/ HTTP/1.0" 200 8696 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"
+[2017-08-23 09:22:42 +0000] [19618] [DEBUG] POST /prov/
+ - - [23/Aug/2017:09:22:42 +0000] "POST /prov/ HTTP/1.0" 200 14850 "http://140.86.38.226:8000/prov/" "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"

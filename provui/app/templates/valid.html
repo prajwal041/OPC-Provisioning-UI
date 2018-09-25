@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %} Welcome |  {% endblock %}
+
+{% block valid %}
+    <form class="form-inline" action="" method="post">{% csrf_token %}
+		<div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"><label for="shape">SHAPE</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="shape_name" required autofocus>
+                {% for shape_name in shape %}
+					<option value="{{ shape_name.shape_name }}"> {{ shape_name.shape_name }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"><label for="size">IMAGES</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="image_name" required autofocus>
+                {% for image_name in image %}
+					<option value="{{ image_name.image_name }}"> {{ image_name.image_name }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+  			<div class="col-sm-1" style="background-color:lavender;"><label for="datavolsize">DATAVOLSIZE(GB)</label></div>
+			<div class="col-sm-2"><input class="form-control" type="text" name="datavol" required autofocus></div>
+        </div>
+        <div class="row">
+  			<div class="col-sm-1" style="background-color:lavender;"><label for="appinstance">APPINSTANCE</label></div>
+			<div class="col-sm-2"><input class="form-control" type="text" name="ainstance" required autofocus></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"><label for="tier">TIER</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="tier_name" required autofocus>
+                {% for tier_name in tier %}
+					<option value="{{ tier_name.tier_name }}"> {{ tier_name.tier_name }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"><label for="instance">INSTANCE</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="inst_name" required autofocus>
+                {% for inst_name in instance %}
+					<option value="{{ inst_name.inst_name }}"> {{ inst_name.inst_name }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1" style="background-color:lavender;"><label for="sshkeys">SSH_keys</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="ssh_name" required autofocus>
+                {% for ssh_name in sshkeys %}
+					<option value="{{ ssh_name.ssh_name }}"> {{ ssh_name.ssh_name }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm search">SUBMIT</button>
+
+<h3>PROVISIONING ENTRIES</h3>
+<table id="div4" class="table table-responsive table-hover table-bordered tablesorter">
+	<tr>
+        <th>IDD</th>
+        <td>{{ authDomain }}</td>
+    </tr>
+    <tr>
+        <th>REST_URL</th>
+        <td>{{ url }}</td>
+    </tr>
+    <tr>
+		<th>DCCODE</th>
+        <td>{{ dccode }}</td>
+    </tr>
+    <tr>
+        <th>SHAPE</th>
+            {% for val in shape_name %}
+			<td>{{ val.shape_name }}</td>
+            {% endfor %}
+    </tr>
+    <tr>
+        <th>OS SIZE</th>
+            {% for val in size_name %}
+			<td>{{ val.size_name }}</td>
+            {% endfor %}
+    </tr>
+    <tr>
+        <th>CUSTCODE</th>
+        <td>{{ custcode }}</td>
+    </tr>
+    <tr>
+        <th>IMAGE</th>
+            {% for val in image_name %}
+			<td>{{ val.image_name }}</td>
+            {% endfor %}
+    </tr>
+    <tr>
+        <th>BACKUPVOLSIZE(GB)</th>
+        <td>{{ backupvolsize }}</td>
+    </tr>
+    <tr>
+        <th>DATAVOLSIZE(GB)</th>
+        <td>{{ datavolsize }}</td>
+    </tr>
+    <tr>
+        <th>APPINSTANCE(GB)</th>
+        <td>{{ appinstance }}</td>
+    </tr>
+    <tr>
+        <th>TIER</th>
+            {% for val in tier_name %}
+			<td>{{ val.tier_name }}</td>
+            {% endfor %}
+    </tr>
+    <tr>
+        <th>INSTANCE</th>
+            {% for val in inst_name %}
+			<td>{{ val.inst_name }}</td>
+            {% endfor %}
+    </tr>
+    <tr>
+        <th>SSH_keys</th>
+            {% for val in ssh_name %}
+			<td>{{ val.ssh_name }}</td>
+            {% endfor %}
+    </tr>
+    <tr>
+        <th>HOSTLABEL</th>
+        <td>{{ hostlabel }}</td>
+    </tr>
+    <tr>
+        <th>SECLIST</th>
+        <td>{{ seclist }}</td>
+    </tr>
+    <tr>
+        <th>ACCOUNT</th>
+        <td>{{ account }}</td>
+    </tr>
+    <tr>
+        <th>PAGEVOLSIZE</th>
+        <td>{{ pagevolsize }}</td>
+    </tr>
+    <tr>
+        <th>EMVOLSIZE(GB)</th>
+        <td>{{ emvolsize }}</td>
+    </tr>
+    <tr>
+        <th>DATACENTER</th>
+        <td>{{ datacenter }}</td>
+    </tr>
+    </table>
+</form>
+
+{% endblock %}

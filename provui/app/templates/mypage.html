@@ -1,0 +1,400 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %} Welcome |  {% endblock %}
+
+{% block mypage %}
+
+    <style>
+.field {
+    width: 80%;
+    margin: 0 auto;
+}
+.left {
+    width: 20%;
+    text-align: right;
+    display: block;
+    float: left;
+    margin-right: 5%;
+}
+</style>
+
+<form class="form-inline" action="" method="post">{% csrf_token %}
+
+        <div class="row">
+            <div class="col-sm-2" style="background-color:lavender;"><label for="domain">Select Customer</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="cust" required autofocus>
+                {% for cust in customer %}
+					<option value="{{ cust.customer }}"> {{ cust.customer }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2" style="background-color:lavender;"><label for="domain">Select Domain</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="idd" required autofocus>
+                {% for idd in Domain %}
+					<option value="{{ idd.idd }}"> {{ idd.idd }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2" style="background-color:lavender;"><label for="domain">Select Endpoint Zone</label></div>
+			<div class="col-sm-2">
+                <select class="form-control input-sm" name="zone" required autofocus>
+                {% for zone in zone %}
+					<option value="{{ zone.zone }}"> {{ zone.zone }} </option>
+				{% endfor %}
+                </select>
+            </div>
+        </div>
+
+
+        <h3>Enter your Login Credentials Here</h3>
+
+        <div class="row">
+  			<div class="col-sm-1" style="background-color:lavender;"><label for="username">USERNAME</label></div>
+			<div class="col-sm-2"><input class="form-control" type="text" name="username" required autofocus></div>
+        </div>
+        <div class="row">
+			<div class="col-sm-1" style="background-color:lavender;"><label for="password">PASSWORD</label></div>
+			<div class="col-sm-2"><input class="form-control" type="password" name="password" required autofocus></div>
+        </div>
+		<button type="submit" class="btn btn-primary btn-sm search" >LOGIN</button>
+</form>
+
+    <body>
+<!-- List of uploaded documents -->
+<h3>Upload the Documents</h3>
+        <!-- Upload form. Note enctype attribute! -->
+        <form class="form-inline" action="" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+            <p>{{ form.non_field_errors }}</p>
+            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+            <ul>
+                <h4><p>For Instructions click <a href="/help/">here</a></p></h4>
+            </ul>
+            <p>
+                {{ form.docfile }}
+            </p>
+            <p><input type="submit" value="Upload" /></p>
+			</div>
+        </form>
+    </body>
+
+    <h3>INPUT ENTRIES</h3>
+<table id="div4" class="table table-responsive table-hover table-bordered tablesorter">
+	<tr>
+		<th>FILE INPUT</th>
+        {% for val in data %}
+            <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+		<th>STATUS</th>
+        {% for val in fstatus %}
+            <td>{{ val }}</td>
+        {% endfor %}
+	</tr>
+    <tr>
+		<th>INVENTORY STATUS</th>
+        {% for val in fdbstatus %}
+            <td>{{ val }}</td>
+        {% endfor %}
+	</tr>
+</table>
+<div class="container">
+    {%  if messages %}
+        <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            {% for message in messages %}
+                <p {% if message.tags == "info" %} class="alert alert-info"
+                {% elif message.tags == "warning" %} class="alert alert-warning"
+                {% elif message.tags == "success" %} class="alert alert-success"{% endif %}>{{ message }} </p>
+            {% endfor %}
+        </div>
+        </div>
+    {% endif %}
+</div>
+
+    <h3>INVENTORY LOG</h3>
+    <table id="div4" class="table table-responsive table-hover table-bordered tablesorter">
+	<tr>
+		<th>AUTHDOMAIN</th>
+		<th>REST_URL</th>
+        <th>DCCODE</th>
+        <th>CUSTCODE</th>
+        <th>ACCOUNT</th>
+		<th>SIZE</th>
+        <th>SHAPE</th>
+        <th>IMAGE</th>
+        <th>DATAVOLSIZE</th>
+        <th>APPINSTANCE</th>
+        <th>BACKUPVOLSIZE</th>
+        <th>HOSTLABEL</th>
+        <th>SECLIST</th>
+        <th>TIER</th>
+        <th>INSTANCE</th>
+        <th>SSH</th>
+        <th>PAGEVOLSIZE</th>
+		<th>EMVOLSIZE</th>
+        <th>DATACENTER</th>
+        <th>USER</th>
+	</tr>
+	<tbody>
+    {% for val in inventory %}
+        <tr>
+            <td>{{ val.authDomain }}</td>
+            <td>{{ val.url }}</td>
+            <td>{{ val.dccode }}</td>
+            <td>{{ val.custcode }}</td>
+            <td>{{ val.account }}</td>
+            <td>{{ val.size }}</td>
+            <td>{{ val.shape }}</td>
+            <td>{{ val.image }}</td>
+            <td>{{ val.datavolsize }}</td>
+            <td>{{ val.appinstance }}</td>
+            <td>{{ val.backupvolsize }}</td>
+            <td>{{ val.hostlabel }}</td>
+            <td>{{ val.seclist }}</td>
+            <td>{{ val.tier }}</td>
+            <td>{{ val.instance }}</td>
+            <td>{{ val.ssh }}</td>
+            <td>{{ val.pagevolsize }}</td>
+            <td>{{ val.emvolsize }}</td>
+            <td>{{ val.datacenter }}</td>
+            <td>{{ val.user }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    <h3>PROVISIONING ENTRIES: Type 1</h3>
+
+<table id="div4" class="table table-responsive table-hover table-bordered tablesorter">
+    <tr>
+        <th>IDD</th>
+        {% for val in fauthDomain %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>REST_URL</th>
+        {% for val in furl %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+		<th>DCCODE</th>
+        {% for val in fdccode %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>CUSTCODE</th>
+        {% for val in fcustcode %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>ACCOUNT</th>
+        {% for val in faccount %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>OS SIZE</th>
+        {% for val in fsize %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>SHAPES</th>
+        {% for val in fshape %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>IMAGES</th>
+        {% for val in fimage %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>DATAVOLSIZE(GB)</th>
+        {% for val in fdatavolsize %}
+        <td>{{ val }}</td>
+        {%  endfor %}
+    </tr>
+    <tr>
+        <th>APPINSTANCE</th>
+        {% for val in fappinstance %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>BACKUPVOLSIZE(GB)</th>
+        {% for val in fbackupvolsize %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>HOSTLABEL</th>
+        {% for val in fhostlabel %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>SECLIST</th>
+        {% for val in fseclist %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>TIER</th>
+        {% for val in ftier %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>INSTANCE TYPE</th>
+        {% for val in finstance %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>SSH_keys</th>
+        {% for val in fssh %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>PAGEVOLSIZE</th>
+        {% for val in fpagevolsize %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>EMVOLSIZE(GB)</th>
+        {% for val in femvolsize %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th>DATACENTER</th>
+        {% for val in fdatacenter %}
+        <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+</table>
+
+ <h3>PROVISIONING ENTRIES: Type 2</h3>
+ {% for authDomain,url,dccode,custcode,account,size,shape,image,datavolsize,appinstance,backupvolsize,hostlabel,seclist,tier,instance,ssh,pagevolsize,emvolsize,datacenter in zipped_data %}
+    <table id="div4" class="table table-responsive table-hover table-bordered tablesorter">
+     <tr>
+        <th>IDD</th>
+        <td>{{ authDomain }}</td>
+    </tr>
+    <tr>
+        <th>REST_URL</th>
+        <td>{{ url }}</td>
+    </tr>
+    <tr>
+		<th>DCCODE</th>
+        <td>{{ dccode }}</td>
+    </tr>
+    <tr>
+        <th>CUSTCODE</th>
+        <td>{{ custcode }}</td>
+    </tr>
+    <tr>
+        <th>ACCOUNT</th>
+        <td>{{ account }}</td>
+    </tr>
+    <tr>
+        <th>OS SIZE</th>
+        <td>{{ size }}</td>
+    </tr>
+    <tr>
+        <th>SHAPES</th>
+        <td>{{ shape }}</td>
+    </tr>
+    <tr>
+        <th>IMAGES</th>
+        <td>{{ image }}</td>
+    </tr>
+    <tr>
+        <th>DATAVOLSIZE(GB)</th>
+        <td>{{ datavolsize }}</td>
+    </tr>
+    <tr>
+        <th>APPINSTANCE</th>
+        <td>{{ appinstance }}</td>
+    </tr>
+    <tr>
+        <th>BACKUPVOLSIZE(GB)</th>
+        <td>{{ backupvolsize }}</td>
+    </tr>
+    <tr>
+        <th>HOSTLABEL</th>
+        <td>{{ hostlabel }}</td>
+    </tr>
+    <tr>
+        <th>SECLIST</th>
+        <td>{{ seclist }}</td>
+    </tr>
+    <tr>
+        <th>TIER</th>
+        <td>{{ tier }}</td>
+    </tr>
+    <tr>
+        <th>INSTANCE TYPE</th>
+        <td>{{ instance }}</td>
+    </tr>
+    <tr>
+        <th>SSH_keys</th>
+        <td>{{ ssh }}</td>
+    </tr>
+    <tr>
+        <th>PAGEVOLSIZE</th>
+        <td>{{ pagevolsize }}</td>
+    </tr>
+    <tr>
+        <th>EMVOLSIZE(GB)</th>
+        <td>{{ emvolsize }}</td>
+    </tr>
+    <tr>
+        <th>DATACENTER</th>
+        <td>{{ datacenter }}</td>
+    </tr>
+    </table>
+ {% endfor %}
+
+    <script>
+var cell = $('td');
+
+cell.each(function() {
+var cell_value = $(this).html();
+if (cell_value == 'VALID')  {
+    $(this).css({'background' : '#00CC66'});
+} else if (cell_value == 'INVALID')  {
+    $(this).css({'background' : '#FFBF00'});
+} else if (cell_value == 'IGNORED')  {
+    $(this).css({'background' : '#FFBF00'});
+} else if (cell_value == 'EXISTS')  {
+    $(this).css({'background' : '#FF69B4'});
+} else if (cell_value == 'PUSHED')  {
+    $(this).css({'background' : '#00CC66'});
+}
+});
+</script>
+
+
+<script src="{% static 'js/jquery.popupoverlay.js' %}"></script>
+
+{% endblock %}
